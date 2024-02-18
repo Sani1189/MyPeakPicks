@@ -32,8 +32,6 @@ body {
     border-bottom: 2px solid white;
     transition: 0.5s;
 }
-
-/* Media query for larger views */
 @media screen and (min-width: 768px) {
     .navbar a {
         font-size: 30px;
@@ -82,7 +80,11 @@ body {
     color: aqua;
     border-radius: 40%;
 }
-
+@media screen and (max-width: 768px) {
+.main img{
+    max-width:80%;
+}
+}
 .anime,
 .movies,
 .tv-series,
