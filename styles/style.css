@@ -27,6 +27,11 @@ body {
     color: white;
     font-weight: bold;
 }
+.navbar a:hover {
+    color: #8a9fff;
+    border-bottom: 2px solid white;
+    transition: 0.5s;
+}
 
 /* Media query for larger views */
 @media screen and (min-width: 768px) {
@@ -45,21 +50,25 @@ body {
     padding: 20px;
     text-align: center;
     margin: 0 auto;
-    width: 60%;
+    min-width: 60%;
+    margin-bottom: 50px;
 }
 
 .footer {
+    display: flex;
+    flex-direction: column;
     background-color: #333;
     color: white;
     padding: 10px;
     text-align: center;
-    position: fixed;
     bottom: 0;
-    width: 100%;
 }
 
 .social-links {
     margin-bottom: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .social-links a {
@@ -72,4 +81,81 @@ body {
     background-color:#333;
     color: aqua;
     border-radius: 40%;
+}
+
+.anime,
+.movies,
+.tv-series,
+.games,
+.books {
+    display: grid;
+    grid-gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.anime-item,
+.movie-item,
+.tv-series-item,
+.game-item,
+.book-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.anime-item:hover,
+.movie-item:hover,
+.tv-series-item:hover,
+.game-item:hover,
+.book-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: 0.5s;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+
+
+.anime-item img,
+.movie-item img,
+.tv-series-item img,
+.game-item img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.book-item img{
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+}
+
+.anime-item h2,
+.movie-item h2,
+.tv-series-item h2,
+.game-item h2,
+.book-item h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.anime-item p,
+.movie-item p,
+.tv-series-item p,
+.game-item p,
+.book-item p {
+    color: #666;
+}
+
+@media screen and (min-width: 768px) {
+    .anime,
+    .movies,
+    .tv-series,
+    .games,
+    .books {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
