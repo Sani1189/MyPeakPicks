@@ -84,6 +84,8 @@ body {
 .main img{
     max-width:80%;
 }
+.main-content{
+    margin-bottom:100px;
 }
 .anime,
 .movies,
